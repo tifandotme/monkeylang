@@ -1,9 +1,8 @@
 package lexer
 
 import (
+	"monkeylang/token"
 	"testing"
-
-	"monkey/token"
 )
 
 func TestNextToken(t *testing.T) {
@@ -16,7 +15,6 @@ let add = fn(x, y) {
 
 let result = add(five, ten);
 `
-
 	tests := []struct {
 		expectedType    token.TokenType
 		expectedLiteral string
